@@ -1,0 +1,8 @@
+README.md
+setup.py
+django_api_cache/__init__.py
+django_api_cache/func_demo.py
+django_api_cache.egg-info/PKG-INFO
+django_api_cache.egg-info/SOURCES.txt
+django_api_cache.egg-info/dependency_links.txt
+django_api_cache.egg-info/top_level.txt

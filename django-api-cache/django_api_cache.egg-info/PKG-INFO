@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: django-api-cache
+Version: 0.0.1
+Summary: A tool for django api cache with args
+Home-page: https://github.com/
+Author: ShuaiShuai Wang
+Author-email: shuaishuai@smxxyaq.com
+License: UNKNOWN
+Description: 'A tool for django api cache with args'
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
