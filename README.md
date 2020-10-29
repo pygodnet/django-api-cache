@@ -12,8 +12,23 @@
 pip install django-api-cache
 ```
 二：缓存配置</br>
-支持django的缓存系统
+支持django的缓存系统配置，参考：https://docs.djangoproject.com/en/2.2/topics/cache/</br>
+在此附上一种redis缓存方式</br>
+```
+pip install django-redis
 
+# settings.py 中加入如下配置
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            # "PASSWORD": "mysecret"
+        }
+    }
+}
+```
 三：使用方法</br>
 	1. 类视图</br>
 ```
@@ -22,7 +37,7 @@ class TestViewTwo(View):
     def post(self,request):
         name = request.META.get('HTTP_AUTHORIZATION')
 ```
-  2. ：函数</br>
+  2. 函数</br>
 ```
 @api_cache(timeout=30,header_key='Authorization',body_data=False,param_data=['aaa'])
 def test_demo(request):
