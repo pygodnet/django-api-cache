@@ -32,6 +32,8 @@ CACHES = {
 三：使用方法</br>
 	1. 类视图</br>
 ```
+from django_api_cache import api_cache
+
 class TestViewTwo(View):
     @method_decorator(api_cache(timeout=30,header_key='Authorization',body_data=False,param_data=['aaa']))
     def post(self,request):
@@ -39,6 +41,8 @@ class TestViewTwo(View):
 ```
   2. 函数视图</br>
 ```
+from django_api_cache import api_cache
+
 @api_cache(timeout=30,header_key='Authorization',body_data=False,param_data=['aaa'])
 def test_demo(request):
 ```
