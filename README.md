@@ -37,7 +37,7 @@ class TestViewTwo(View):
     def post(self,request):
         name = request.META.get('HTTP_AUTHORIZATION')
 ```
-  2. 函数</br>
+  2. 函数视图</br>
 ```
 @api_cache(timeout=30,header_key='Authorization',body_data=False,param_data=['aaa'])
 def test_demo(request):
